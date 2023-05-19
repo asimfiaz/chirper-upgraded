@@ -11,7 +11,7 @@
         <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="License" />
     </a>
     <a href="https://github.com/laravel/framework/actions">
-        <img src="https://img.shields.io/badge/Tests-Pending-critical?style=for-the-badge&logo=php" alt="Build Status" />
+        <img src="https://img.shields.io/badge/Tests-Pending-critical?style=for-the-badge" alt="Tests" />
     </a>
 </p>
 
