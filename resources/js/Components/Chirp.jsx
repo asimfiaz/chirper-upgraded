@@ -5,7 +5,7 @@ import Dropdown from './Dropdown';
 import { useForm, usePage } from '@inertiajs/react';
 import InputError from './InputError';
 import PrimaryButton from './PrimaryButton';
-import FollowButton from './FollowButton';
+import FollowButton from './Buttons/FollowButton';
 
 dayjs.extend(relativeTime)
 
