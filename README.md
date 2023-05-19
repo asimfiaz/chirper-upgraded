@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://packagist.org/packages/laravel/framework">
-        <img src="https://img.shields.io/badge/framework-Laravel-red?style=for-the-badge&logo=laravel" alt="License" />
+        <img src="https://img.shields.io/badge/Built_with-Laravel-red?style=for-the-badge&logo=laravel" alt="License" />
     </a>
     <a href="https://github.com/laravel/framework/actions">
         <img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status" />
