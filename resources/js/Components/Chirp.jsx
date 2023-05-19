@@ -5,6 +5,7 @@ import Dropdown from './Dropdown';
 import { useForm, usePage } from '@inertiajs/react';
 import InputError from './InputError';
 import PrimaryButton from './PrimaryButton';
+import FollowButton from './FollowButton';
 
 dayjs.extend(relativeTime)
 
@@ -32,6 +33,7 @@ export default function Chirp({ chirp }) {
                 <div className="flex justify-between items-center">
                     <div>
                         <span className="text-gray-800">{chirp.user.name}</span>
+                        { chirp.user_id !== auth.user.id && <FollowButton />}
                         <small className="ml-2 text-sm text-gray-600">{dayjs(chirp.created_at).fromNow()}</small>
                         { chirp.created_at !== chirp.updated_at && <small className="text-sm text-gray-600"> &middot; edited</small>}
                     </div>
