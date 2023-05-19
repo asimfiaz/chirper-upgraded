@@ -7,11 +7,11 @@
     <a href="https://github.com/laravel/framework/actions">
         <img src="https://img.shields.io/badge/PHP-v8.1-blueviolet?style=for-the-badge&logo=php" alt="PHP Version" />
     </a>
-    <a href="https://github.com/laravel/framework/actions">
-        <img src="https://img.shields.io/badge/Tests-Pending-critical?style=for-the-badge&logo=php" alt="Build Status" />
-    </a>
     <a href="https://packagist.org/packages/laravel/framework">
         <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge" alt="License" />
+    </a>
+    <a href="https://github.com/laravel/framework/actions">
+        <img src="https://img.shields.io/badge/Tests-Pending-critical?style=for-the-badge&logo=php" alt="Build Status" />
     </a>
 </p>
 
