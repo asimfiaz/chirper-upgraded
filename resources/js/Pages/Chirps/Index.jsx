@@ -6,7 +6,7 @@ import InputError from '@/Components/InputError';
 import PrimaryButton from '@/Components/PrimaryButton';
 import Chirp from '@/Components/Chirp';
 
-export default function Index({ auth, chirps }) {
+export default function Index({ auth, chirps, follows }) {
     const { data, setData, post, processing, reset, errors } = useForm({
         message: '',
     });
@@ -16,6 +16,26 @@ export default function Index({ auth, chirps }) {
 
         post(route('chirps.store'), { onSuccess: () => reset() });
     };
+
+    // console.log(follows.includes(
+    //     {
+    //         id: 1,
+    //         user_id: 2,
+    //         follower_id: 1,
+    //         created_at: "2023-05-20T01:30:36.000000Z",
+    //         updated_at: "2023-05-20T01:30:36.000000Z",
+    //         user: {
+    //             id: 2,
+    //             name: "Developer"
+    //         },
+    //     }
+    // ));
+
+    console.log(follows.find((o, i) => {
+        if (o.user_id === 2) {
+            return true;
+        }
+    }));
 
     return (
         <AuthenticatedLayout user={auth.user}>
@@ -32,7 +52,18 @@ export default function Index({ auth, chirps }) {
                     <PrimaryButton className='mt-4' disabled={processing}>Chirp</PrimaryButton>
                 </form>
                 <div className='mt-6 bg-white shadow-sm rounded-lg divide-y'>
-                    {chirps.map(chirp => <Chirp key={chirp.id} chirp={chirp} />)}
+                    {chirps.map(chirp => (
+                        <span key={chirp.id}>
+                            <Chirp
+                                chirp={chirp}
+                                followed={follows.find((o, i) => {
+                                    if (o.user_id === 2) {
+                                        return true;
+                                    }
+                                })}
+                            />
+                        </span>
+                    ))}
                 </div>
             </div>
         </AuthenticatedLayout>
