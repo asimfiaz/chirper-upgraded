@@ -33,7 +33,11 @@ export default function Chirp({ chirp, followed }) {
                 <div className="flex justify-between items-center">
                     <div>
                         <span className="text-gray-800">{chirp.user.name}</span>
-                        { chirp.user_id !== auth.user.id && <FollowButton chirp={chirp} followed={followed ? true : false} />}
+                        { chirp.user_id !== auth.user.id ? (
+                            <FollowButton chirp={chirp} followed={followed ? true : false} />
+                        ) : (
+                            <span>(You)</span>
+                        )}
                         <small className="ml-2 text-sm text-gray-600">{dayjs(chirp.created_at).fromNow()}</small>
                         { chirp.created_at !== chirp.updated_at && <small className="text-sm text-gray-600"> &middot; edited</small>}
                     </div>
